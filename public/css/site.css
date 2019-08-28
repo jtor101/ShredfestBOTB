@@ -1,6 +1,10 @@
 #headerBg,
 #nslfoot,
-#contentArea {
+#contentArea1,
+#contentArea2,
+#contentArea3,
+#divisionArea1,
+#divisionArea2 {
   border: 1px ridge black;
   background-color: lightgrey;
 }
@@ -11,6 +15,14 @@
 
 #headerBg h2 {
   font-size: 1.5em;
+}
+
+#contentArea1 h3,
+#contentArea2 h3,
+#contentArea3 h3,
+#divisionArea1 h3,
+#divisionArea2 h3 {
+  font-size: 1.2em;
 }
 
 #themePick {
