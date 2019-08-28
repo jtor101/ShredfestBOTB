@@ -79,24 +79,82 @@
       </ul>
     </nav>
 
-    <main class="row">
-      <table
-        class="table table-hover table-bordered col-8 offset-2"
-        id="teamTable"
-      >
-        <thead>
-          <tr>
-            <th scope="col">Member Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Contact Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Details</th>
-          </tr>
-        </thead>
-        <tbody id="teamTBody"></tbody>
-      </table>
+    <main>
+      <div class="row">
+        <table
+          class="table table-hover table-bordered col-8 offset-2"
+          id="teamTable"
+        >
+          <thead>
+            <tr>
+              <th scope="col">Member Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Contact Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Details</th>
+            </tr>
+          </thead>
+          <tbody id="teamTBody"></tbody>
+        </table>
+      </div>
+
+      <div class="row">
+        <p class="col text-center" id="editMode">EDIT MODE</p>
+      </div>
+
+      <form name="memberInfo" id="memberInfo" class="col-8 offset-2 py-3 my-3">
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="memberName">Member Name: </label>
+            <input type="text" class="form-control" id="memberName" readonly />
+          </div>
+
+          <div class="form-group col-6 px-5">
+            <label for="memberEmail">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="memberEmail"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="contactName">Contact Name: </label>
+            <input type="text" class="form-control" id="contactName" readonly />
+          </div>
+
+          <div class="form-group col-6 px-5">
+            <label for="memberAge">Age:</label>
+            <input type="number" class="form-control" id="memberAge" readonly />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="memberGender">Gender:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="memberGender"
+              readonly
+            />
+          </div>
+          <div class="form-group col-6 px-5">
+            <label for="memberPhone">Phone: </label>
+            <input type="text" class="form-control" id="memberPhone" readonly />
+          </div>
+        </div>
+        <a class="btn btn-info mt-3" id="editBtn" href="#memberInfo">Edit</a>
+        <a class="btn btn-danger mt-3" id="cancelBtn" href="#memberInfo">
+          Cancel
+        </a>
+        <a class="btn btn-success mt-3" id="submitBtn" href="#">
+          Submit
+        </a>
+      </form>
     </main>
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
