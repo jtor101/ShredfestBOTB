@@ -79,31 +79,57 @@
       </ul>
     </nav>
 
-    <main class="row">
-      <section id="divisionArea1" class="col-10 offset-1 my-3 p-2 text-center">
-        <h3>Our Divisions</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          dui nisi, tristique sit amet dapibus et, sollicitudin vel orci. Mauris
-          ut lectus pellentesque magna tincidunt gravida. In hac habitasse
-          platea dictumst. Vestibulum finibus convallis ornare. Donec et mi et
-          nunc dictum luctus.
-        </p>
-      </section>
+    <main class="row pb-5">
+      <h3 class="col-8 offset-2 text-center py-3">Member Information</h3>
+      <form name="memberInfo" id="memberInfo" class="col-8 offset-2 py-3">
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="memberName">Member Name: </label>
+            <input type="text" class="form-control" id="memberName" readonly />
+          </div>
 
-      <section id="divisionArea2" class="col-8 offset-2 my-3 p-2 text-center">
-        <div class="form-group col-8 offset-2">
-          <h3><label for="divisionSel">Select a Division</label></h3>
-          <select class="form-control" id="divisionSel">
-            <option>-- Click here --</option>
-          </select>
-          <p id="teamDesc"></p>
+          <div class="form-group col-6 px-5">
+            <label for="memberEmail">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="memberEmail"
+              readonly
+            />
+          </div>
         </div>
-      </section>
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="contactName">Contact Name: </label>
+            <input type="text" class="form-control" id="contactName" readonly />
+          </div>
 
-      <section id="divisionArea3" class="col-8 offset-2 my-3 p-2 text-center">
-        <div class="card"></div>
-      </section>
+          <div class="form-group col-6 px-5">
+            <label for="memberAge">Age:</label>
+            <input type="number" class="form-control" id="memberAge" readonly />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="memberGender">Gender:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="memberGender"
+              readonly
+            />
+          </div>
+          <div class="form-group col-6 px-5">
+            <label for="memberPhone">Phone: </label>
+            <input
+              type="number"
+              class="form-control"
+              id="memberPhone"
+              readonly
+            />
+          </div>
+        </div>
+      </form>
     </main>
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
@@ -124,7 +150,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/primaryscript.js"></script>
+    <script src="scripts/teamdetails.js"></script>
     <script src="scripts/theme.js"></script>
   </body>
 </html>

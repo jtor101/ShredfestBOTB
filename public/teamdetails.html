@@ -80,30 +80,23 @@
     </nav>
 
     <main class="row">
-      <section id="divisionArea1" class="col-10 offset-1 my-3 p-2 text-center">
-        <h3>Our Divisions</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          dui nisi, tristique sit amet dapibus et, sollicitudin vel orci. Mauris
-          ut lectus pellentesque magna tincidunt gravida. In hac habitasse
-          platea dictumst. Vestibulum finibus convallis ornare. Donec et mi et
-          nunc dictum luctus.
-        </p>
-      </section>
-
-      <section id="divisionArea2" class="col-8 offset-2 my-3 p-2 text-center">
-        <div class="form-group col-8 offset-2">
-          <h3><label for="divisionSel">Select a Division</label></h3>
-          <select class="form-control" id="divisionSel">
-            <option>-- Click here --</option>
-          </select>
-          <p id="teamDesc"></p>
-        </div>
-      </section>
-
-      <section id="divisionArea3" class="col-8 offset-2 my-3 p-2 text-center">
-        <div class="card"></div>
-      </section>
+      <table
+        class="table table-hover table-bordered col-8 offset-2"
+        id="teamTable"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Member Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody id="teamTBody"></tbody>
+      </table>
     </main>
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
@@ -124,7 +117,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/primaryscript.js"></script>
+    <script src="scripts/teamdetails.js"></script>
     <script src="scripts/theme.js"></script>
   </body>
 </html>

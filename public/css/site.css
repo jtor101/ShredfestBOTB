@@ -4,17 +4,20 @@
 #contentArea2,
 #contentArea3,
 #divisionArea1,
-#divisionArea2 {
+#divisionArea2,
+.card,
+#teamTable,
+#memberInfo {
   border: 1px ridge black;
   background-color: lightgrey;
 }
 
 #headerBg h1 {
-  font-size: 2em;
+  font-size: 2.7em;
 }
 
 #headerBg h2 {
-  font-size: 1.5em;
+  font-size: 2.2em;
 }
 
 #contentArea1 h3,
@@ -22,7 +25,11 @@
 #contentArea3 h3,
 #divisionArea1 h3,
 #divisionArea2 h3 {
-  font-size: 1.2em;
+  font-size: 2em;
+}
+
+.card h4 {
+  font-size: 1.8em;
 }
 
 #themePick {

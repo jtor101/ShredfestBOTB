@@ -2,6 +2,11 @@
 
 $(function() {
   $("#lightRadio").on("change", function() {
+    localStorage.themeset = "lightTheme";
+    if (localStorage.themeset == "lightTheme") {
+      $("#lightRadio").attr("checked", "true");
+    }
+
     $("#nslbody").css("background-color", "white");
     $("#headerBg")
       .css("background-color", "lightgrey")
@@ -30,6 +35,18 @@ $(function() {
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
       .css("color", "black");
+    $(".card")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
+    $("#teamTable")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
+    $("#memberInfo")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
     $("#nslfoot")
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
@@ -37,6 +54,11 @@ $(function() {
   });
 
   $("#darkRadio").on("change", function() {
+    localStorage.themeset = "darkTheme";
+    if (localStorage.themeset == "darkTheme") {
+      $("#darkRadio").attr("checked", "true");
+    }
+
     $("#nslbody").css("background-color", "black");
     $("#headerBg")
       .css("background-color", "grey")
@@ -62,6 +84,18 @@ $(function() {
       .css("border", "1px ridge white")
       .css("color", "white");
     $("#divisionArea2")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
+    $(".card")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
+    $("#teamTable")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
+    $("#memberInfo")
       .css("background-color", "grey")
       .css("border", "1px ridge white")
       .css("color", "white");
