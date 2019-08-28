@@ -1,0 +1,18 @@
+#headerBg,
+#nslfoot,
+#contentArea {
+  border: 1px ridge black;
+  background-color: lightgrey;
+}
+
+#headerBg h1 {
+  font-size: 2em;
+}
+
+#headerBg h2 {
+  font-size: 1.5em;
+}
+
+#themePick {
+  font-size: 0.8em;
+}

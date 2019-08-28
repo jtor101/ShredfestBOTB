@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "4 Piece Acts",
+    "Code": "4PieceActs",
+    "Description": "This division features bands with a maximum of four members i.e. Vocalist, Lead Guitarist, Bassist, and Drummer."
+  },
+  {
+    "Name": "6 Piece Acts",
+    "Code": "6PieceActs",
+    "Description": "This division features bands with a maximum of six members i.e. Vocalist, Lead Guitarist, Rhythm Guitarist, Bassist, Keyboardist, and Drummer."
+  },
+  {
+    "Name": "Femme Fatales",
+    "Code": "FemmeFatales",
+    "Description": "This division features all female bands with a maximum of six members."
+  },
+  {
+    "Name": "Classic Rockers",
+    "Code": "ClassicRockers",
+    "Description": "This division features bands with members over 50 with a maximum of six members."
+  }
+]
