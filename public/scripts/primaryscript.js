@@ -49,10 +49,15 @@ $(function() {
             numOfMembersMax +
             "</p>"
         );
+        let editTeamLink = $(
+          "<a class='btn btn-secondary text-light mr-2' href='editteam.html?teamid=" +
+            teams[i].TeamId +
+            "'>Edit Team Details</a>"
+        );
         let detailsLink = $(
           "<a class='btn btn-dark text-light' href='teamdetails.html?teamid=" +
             teams[i].TeamId +
-            "'>View More Details</a>"
+            "'>View Roster Details</a>"
         );
 
         cardBody.append(
@@ -60,6 +65,7 @@ $(function() {
           cardMgrName,
           cardMgrPhone,
           cardNumOfMembersCurrent,
+          editTeamLink,
           detailsLink
         );
         card.append(cardBody);

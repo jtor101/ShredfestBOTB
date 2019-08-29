@@ -114,19 +114,22 @@ function isThereAnyGenderChangeConflicts(newTeamGender, team) {
 
 function isValidTeam(team) {
   if (team.TeamName == undefined || team.TeamName.trim() == "") return false;
-  console.log("Team Name valid");
   if (team.League == undefined || team.League.trim() == "") return false;
-  console.log("League valid");
   if (team.ManagerName == undefined || team.ManagerName.trim() == "")
     return false;
   if (team.ManagerPhone == undefined || team.ManagerPhone.trim() == "")
     return false;
+
   if (team.ManagerEmail == undefined || team.ManagerEmail.trim() == "")
     return false;
+
   if (team.MaxTeamMembers == undefined || isNaN(team.MaxTeamMembers))
     return false;
+
   if (team.MinMemberAge == undefined || isNaN(team.MinMemberAge)) return false;
+
   if (team.MaxMemberAge == undefined || isNaN(team.MaxMemberAge)) return false;
+
   if (team.TeamGender == undefined || team.TeamGender.trim() == "")
     return false;
   if (
@@ -331,13 +334,13 @@ app.put("/api/teams", urlencodedParser, function(req, res) {
     TeamGender: req.body.teamgender
   };
 
-  //console.log("Performing team validation...")
+  console.log("Performing team validation...");
   if (!isValidTeam(team)) {
-    //console.log("Invalid  data!")
+    console.log("Invalid  data!");
     res.status(400).send("Bad Request - Incorrect or Missing Data");
     return;
   }
-  //console.log("Valid data!")
+  console.log("Valid data!");
 
   let data = fs.readFileSync(__dirname + "/data/teams.json", "utf8");
   data = JSON.parse(data);

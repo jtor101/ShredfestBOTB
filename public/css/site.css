@@ -9,7 +9,8 @@
 #teamTable,
 #memberInfo,
 #registerArea1,
-#registerTeam {
+#registerTeam,
+#editTeam {
   border: 1px ridge black;
   background-color: lightgrey;
 }

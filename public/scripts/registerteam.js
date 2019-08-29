@@ -16,6 +16,5 @@ $(function() {
   $("#submitBtn").on("click", function() {
     $.post("api/teams", $("#registerTeam").serialize());
     window.location.href = "divisions.html"; //redirects after submit to courses.html
-    //return false;
   });
 });
