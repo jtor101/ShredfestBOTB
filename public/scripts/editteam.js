@@ -44,8 +44,8 @@ $(function() {
     $("#managerPhone").val(team.ManagerPhone);
     $("#managerEmail").val(team.ManagerEmail);
     $("#maxTeamMembers").val(team.MaxTeamMembers);
-    $("#minAge").val(team.MinAge);
-    $("#maxAge").val(team.MaxAge);
+    $("#minAge").val(team.MinMemberAge);
+    $("#maxAge").val(team.MaxMemberAge);
     $("#teamGender").val(team.TeamGender);
   });
 });

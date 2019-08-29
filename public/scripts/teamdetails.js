@@ -71,14 +71,28 @@ $(function() {
           team.Members[i].Gender +
           "</td><td>" +
           team.Members[i].Phone +
-          "</td><td><a id='id" +
+          "</td><td><a class='btn btn-primary' id='id" +
           i +
           "' href='#memberInfo?memberid=" +
           team.Members[i].MemberId +
-          "'>Details</a></tr>"
+          "'>Details</a></td><td><button class='btn btn-danger' id='deleteid" +
+          team.Members[i].MemberId +
+          "'>Delete</button></td></tr>"
       );
 
       $("#teamTBody").append(memInfo);
+
+      $("#deleteid" + team.Members[i].MemberId).on("click", function() {
+        confirm("Are you sure you want to delete this member?");
+        $.ajax({
+          url: "/api/teams/" + id + "/members/" + team.Members[i].MemberId,
+          method: "DELETE",
+          contentType: "application/json",
+          success: function() {
+            alert("Updated!");
+          }
+        });
+      });
 
       $("#id" + i).on("click", function() {
         $("#memberInfo").show();

@@ -6,6 +6,7 @@
 #divisionArea1,
 #divisionArea2,
 .card,
+#cardHeading,
 #teamTable,
 #memberInfo,
 #registerArea1,
@@ -27,7 +28,8 @@
 #contentArea2 h3,
 #contentArea3 h3,
 #divisionArea1 h3,
-#divisionArea2 h3 {
+#divisionArea2 h3,
+#cardHeading {
   font-size: 2em;
 }
 

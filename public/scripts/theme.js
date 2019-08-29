@@ -39,6 +39,10 @@ $(function() {
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
       .css("color", "black");
+    $("#cardHeading")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
     $("#teamTable")
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
@@ -52,6 +56,10 @@ $(function() {
       .css("border", "1px ridge black")
       .css("color", "black");
     $("#registerTeam")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
+    $("#editTeam")
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
       .css("color", "black");
@@ -99,6 +107,10 @@ $(function() {
       .css("background-color", "grey")
       .css("border", "1px ridge white")
       .css("color", "white");
+    $("#cardHeading")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
     $("#teamTable")
       .css("background-color", "grey")
       .css("border", "1px ridge white")
@@ -112,6 +124,10 @@ $(function() {
       .css("border", "1px ridge white")
       .css("color", "white");
     $("#registerTeam")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
+    $("#editTeam")
       .css("background-color", "grey")
       .css("border", "1px ridge white")
       .css("color", "white");

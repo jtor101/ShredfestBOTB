@@ -50,14 +50,19 @@ $(function() {
             "</p>"
         );
         let editTeamLink = $(
-          "<a class='btn btn-secondary text-light mr-2' href='editteam.html?teamid=" +
+          "<a class='btn btn-secondary text-light' href='editteam.html?teamid=" +
             teams[i].TeamId +
             "'>Edit Team Details</a>"
         );
         let detailsLink = $(
-          "<a class='btn btn-dark text-light' href='teamdetails.html?teamid=" +
+          "<a class='btn btn-dark text-light mx-2' href='teamdetails.html?teamid=" +
             teams[i].TeamId +
             "'>View Roster Details</a>"
+        );
+        let deleteLink = $(
+          "<button class='btn btn-danger text-light' id='team" +
+            teams[i].TeamId +
+            "'>Delete Team</a>"
         );
 
         cardBody.append(
@@ -66,10 +71,23 @@ $(function() {
           cardMgrPhone,
           cardNumOfMembersCurrent,
           editTeamLink,
-          detailsLink
+          detailsLink,
+          deleteLink
         );
         card.append(cardBody);
         $("#divisionArea3").append(card);
+
+        $("#team" + teams[i].TeamId).on("click", function() {
+          confirm("Are you sure you want to delete this band?");
+          $.ajax({
+            url: "/api/teams/" + teams[i].TeamId,
+            method: "DELETE",
+            success: function() {
+              alert("Updated!");
+            }
+          });
+          location.href = "index.html";
+        });
       }
     });
   }

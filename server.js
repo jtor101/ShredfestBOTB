@@ -567,10 +567,9 @@ app.delete("/api/teams/:teamid/members/:memberid", urlencodedParser, function(
     res.status(404).send("Team Not Found");
     return;
   }
-  console.log("Found team!");
 
   // find existing member on the team
-  let foundAt = team.Members.findIndex(m => m.MemberId == req.body.memberid);
+  let foundAt = team.Members.findIndex(m => m.MemberId == memberId);
 
   let match = null;
   // delete the member if found
