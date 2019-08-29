@@ -50,7 +50,7 @@ $(function() {
             "</p>"
         );
         let detailsLink = $(
-          "<a class='btn btn-dark text-light' href='teamdetails.html?id=" +
+          "<a class='btn btn-dark text-light' href='teamdetails.html?teamid=" +
             teams[i].TeamId +
             "'>View More Details</a>"
         );

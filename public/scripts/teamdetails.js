@@ -3,7 +3,7 @@
 $(function() {
   // Gets teamId from query
   let urlParams = new URLSearchParams(location.search);
-  let id = urlParams.get("id");
+  let id = urlParams.get("teamid");
   $("#memberInfo").hide();
   $("#cancelBtn").hide();
   $("#submitBtn").hide();
@@ -15,10 +15,10 @@ $(function() {
     $("#submitBtn").show();
     $("#memberName").prop("readonly", false);
     $("#memberEmail").prop("readonly", false);
-    $("#contactName").attr("readonly", false);
-    $("#memberAge").attr("readonly", false);
-    $("#memberGender").attr("readonly", false);
-    $("#memberPhone").attr("readonly", false);
+    $("#contactName").prop("readonly", false);
+    $("#memberAge").prop("readonly", false);
+    $("#memberGender").prop("readonly", false);
+    $("#memberPhone").prop("readonly", false);
     $("#editMode").show();
   });
   $("#cancelBtn").on("click", function() {
@@ -27,12 +27,30 @@ $(function() {
     $("#submitBtn").hide();
     $("#memberName").prop("readonly", true);
     $("#memberEmail").prop("readonly", true);
-    $("#contactName").attr("readonly", true);
-    $("#memberAge").attr("readonly", true);
-    $("#memberGender").attr("readonly", true);
-    $("#memberPhone").attr("readonly", true);
+    $("#contactName").prop("readonly", true);
+    $("#memberAge").prop("readonly", true);
+    $("#memberGender").prop("readonly", true);
+    $("#memberPhone").prop("readonly", true);
     $("#editMode").hide();
   });
+
+  $("#submitBtn").on("click", sendForm);
+
+  function sendForm() {
+    $.ajax({
+      //if/else w validation, see editcourse
+      url: "/api/teams/" + id + "/members",
+      method: "PUT",
+      dataType: "json",
+      data: $("#memberInfo").serialize(),
+      success: function() {
+        alert("Updated!");
+      }
+    });
+    location.href = "index.html";
+  }
+
+  //return false;
 
   $.getJSON("/api/teams/" + id, function(data) {
     let team = data;
@@ -53,7 +71,7 @@ $(function() {
           team.Members[i].Phone +
           "</td><td><a id='id" +
           i +
-          "' href='#?id=" +
+          "' href='#memberInfo?memberid=" +
           team.Members[i].MemberId +
           "'>Details</a></tr>"
       );
@@ -62,6 +80,7 @@ $(function() {
 
       $("#id" + i).on("click", function() {
         $("#memberInfo").show();
+        $("#memberId").val(team.Members[i].MemberId);
         $("#memberName").val(team.Members[i].MemberName);
         $("#memberEmail").val(team.Members[i].Email);
         $("#contactName").val(team.Members[i].ContactName);

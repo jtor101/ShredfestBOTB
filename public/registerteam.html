@@ -83,7 +83,7 @@
 
     <main class="row">
       <section id="divisionArea1" class="col-10 offset-1 my-3 p-2 text-center">
-        <h3>Our Divisions</h3>
+        <h3>Register A Team</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           dui nisi, tristique sit amet dapibus et, sollicitudin vel orci. Mauris
@@ -93,19 +93,92 @@
         </p>
       </section>
 
-      <section id="divisionArea2" class="col-8 offset-2 my-3 p-2 text-center">
-        <div class="form-group col-8 offset-2">
-          <h3><label for="divisionSel">Select a Division</label></h3>
-          <select class="form-control" id="divisionSel">
-            <option>-- Click here --</option>
-          </select>
-        </div>
-      </section>
+      <form
+        name="registerTeam"
+        id="registerTeam"
+        class="col-8 offset-2 py-3 my-3"
+      >
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="teamName">Team Name: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="teamName"
+              name="TeamName"
+            />
+          </div>
 
-      <section id="divisionArea3" class="col-8 offset-2 my-3 p-2 text-center">
-        <h3>Bands</h3>
-        <div class="card"></div>
-      </section>
+          <div class="form-group col-6 px-5">
+            <label for="teamLeague">League:</label>
+            <select class="form-control" id="teamLeague" name="League">
+              <option>-- Choose A League --</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="managerName">Manager Name: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="managerName"
+              name="ManagerName"
+            />
+          </div>
+
+          <div class="form-group col-6 px-5">
+            <label for="managerPhone">Manager Phone:</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="managerPhone"
+              name="ManagerPhone"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="minAge">Minimum Age:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="minAge"
+              name="MinAge"
+            />
+          </div>
+          <div class="form-group col-6 px-5">
+            <label for="maxAge">Maximum Age: </label>
+            <input
+              type="number"
+              class="form-control"
+              id="maxAge"
+              name="MaxAge"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6 px-5">
+            <label for="maxTeamMembers">Maximum Team Members:</label>
+            <select class="form-control" id="maxTeamMembers" name="League">
+              <option>-- Choose A Member Maximum --</option>
+            </select>
+          </div>
+          <div class="form-group col-6 px-5">
+            <label for="teamGender">Team Gender: </label>
+            <select class="form-control" id="teamGender" name="gender">
+              <option>-- Choose Team Gender --</option>
+            </select>
+          </div>
+        </div>
+        <a class="btn btn-danger mt-3" id="cancelBtn" href="index.html">
+          Cancel
+        </a>
+        <button type="submit" class="btn btn-success mt-3" id="submitBtn">
+          Submit
+        </button>
+      </form>
     </main>
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
@@ -126,7 +199,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/primaryscript.js"></script>
     <script src="scripts/theme.js"></script>
   </body>
 </html>
