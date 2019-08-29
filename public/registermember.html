@@ -81,49 +81,23 @@
       </ul>
     </nav>
 
-    <main>
-      <div class="row">
-        <a class="btn btn-info col-2 offset-5 my-4" id="regBtn" href="#"
-          >Register New Member</a
-        >
-      </div>
-      <div class="row">
-        <table
-          class="table table-hover table-bordered col-8 offset-2"
-          id="teamTable"
-        >
-          <thead>
-            <tr>
-              <th scope="col">Member Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Contact Name</th>
-              <th scope="col">Age</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Details</th>
-            </tr>
-          </thead>
-          <tbody id="teamTBody"></tbody>
-        </table>
-      </div>
+    <main class="row">
+      <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
+        <h3>Register A Member</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          dui nisi, tristique sit amet dapibus et, sollicitudin vel orci. Mauris
+          ut lectus pellentesque magna tincidunt gravida. In hac habitasse
+          platea dictumst. Vestibulum finibus convallis ornare. Donec et mi et
+          nunc dictum luctus.
+        </p>
+      </section>
 
-      <div class="row">
-        <p class="col text-center" id="editMode">EDIT MODE</p>
-      </div>
-
-      <form name="memberInfo" id="memberInfo" class="col-8 offset-2 py-3 my-3">
-        <div class="row">
-          <div class="form-group col-4 offset-4 px-5">
-            <label for="memberId">Member Id: </label>
-            <input
-              type="number"
-              class="form-control"
-              id="memberId"
-              name="memberid"
-              readonly
-            />
-          </div>
-        </div>
+      <form
+        name="registerMember"
+        id="registerMember"
+        class="col-8 offset-2 py-3 my-3"
+      >
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="memberName">Member Name: </label>
@@ -132,7 +106,6 @@
               class="form-control"
               id="memberName"
               name="membername"
-              readonly
             />
           </div>
 
@@ -143,7 +116,6 @@
               class="form-control"
               id="memberEmail"
               name="email"
-              readonly
             />
           </div>
         </div>
@@ -155,7 +127,6 @@
               class="form-control"
               id="contactName"
               name="contactname"
-              readonly
             />
           </div>
 
@@ -166,20 +137,18 @@
               class="form-control"
               id="memberAge"
               name="age"
-              readonly
             />
           </div>
         </div>
         <div class="row">
           <div class="form-group col-6 px-5">
-            <label for="memberGender">Gender:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="memberGender"
-              name="gender"
-              readonly
-            />
+            <label for="teamGender">Gender: </label>
+            <select class="form-control" id="teamGender" name="gender">
+              <option>-- Choose Team Gender --</option>
+              <option value="Any">Any</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
           <div class="form-group col-6 px-5">
             <label for="memberPhone">Phone: </label>
@@ -188,12 +157,10 @@
               class="form-control"
               id="memberPhone"
               name="phone"
-              readonly
             />
           </div>
         </div>
-        <a class="btn btn-info mt-3" id="editBtn" href="#memberInfo">Edit</a>
-        <a class="btn btn-danger mt-3" id="cancelBtn" href="#memberInfo">
+        <a class="btn btn-danger mt-3" id="cancelBtn" href="divisions.html">
           Cancel
         </a>
         <button type="submit" class="btn btn-success mt-3" id="submitBtn">
@@ -220,7 +187,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/teamdetails.js"></script>
+    <script src="scripts/registermember.js"></script>
     <script src="scripts/theme.js"></script>
   </body>
 </html>

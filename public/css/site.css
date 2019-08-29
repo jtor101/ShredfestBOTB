@@ -7,7 +7,9 @@
 #divisionArea2,
 .card,
 #teamTable,
-#memberInfo {
+#memberInfo,
+#registerArea1,
+#registerTeam {
   border: 1px ridge black;
   background-color: lightgrey;
 }

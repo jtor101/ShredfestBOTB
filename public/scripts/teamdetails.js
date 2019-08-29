@@ -9,6 +9,8 @@ $(function() {
   $("#submitBtn").hide();
   $("#editMode").hide();
 
+  $("#regBtn").attr("href", "registermember.html?teamid=" + id);
+
   $("#editBtn").on("click", function() {
     $("#editBtn").hide();
     $("#cancelBtn").show();

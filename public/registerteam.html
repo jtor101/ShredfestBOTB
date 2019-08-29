@@ -82,7 +82,7 @@
     </nav>
 
     <main class="row">
-      <section id="divisionArea1" class="col-10 offset-1 my-3 p-2 text-center">
+      <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
         <h3>Register A Team</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -105,13 +105,13 @@
               type="text"
               class="form-control"
               id="teamName"
-              name="TeamName"
+              name="teamname"
             />
           </div>
 
           <div class="form-group col-6 px-5">
             <label for="teamLeague">League:</label>
-            <select class="form-control" id="teamLeague" name="League">
+            <select class="form-control" id="teamLeague" name="leaguecode">
               <option>-- Choose A League --</option>
             </select>
           </div>
@@ -124,7 +124,7 @@
               type="text"
               class="form-control"
               id="managerName"
-              name="ManagerName"
+              name="managername"
             />
           </div>
 
@@ -134,7 +134,7 @@
               type="tel"
               class="form-control"
               id="managerPhone"
-              name="ManagerPhone"
+              name="managerphone"
             />
           </div>
         </div>
@@ -145,31 +145,56 @@
               type="number"
               class="form-control"
               id="minAge"
-              name="MinAge"
+              name="minmemberage"
             />
           </div>
+          <div class="form-group col-6 px-5">
+            <label for="maxAge">Manager Email: </label>
+            <input
+              type="email"
+              class="form-control"
+              id="emailAddr"
+              name="manageremail"
+            />
+          </div>
+        </div>
+        <div class="row">
           <div class="form-group col-6 px-5">
             <label for="maxAge">Maximum Age: </label>
             <input
               type="number"
               class="form-control"
               id="maxAge"
-              name="MaxAge"
+              name="maxmemberage"
             />
           </div>
-        </div>
-        <div class="row">
           <div class="form-group col-6 px-5">
             <label for="maxTeamMembers">Maximum Team Members:</label>
-            <select class="form-control" id="maxTeamMembers" name="League">
-              <option>-- Choose A Member Maximum --</option>
+            <select
+              class="form-control"
+              id="maxTeamMembers"
+              name="maxteammembers"
+            >
+              <option>-- Choose Member Maximum --</option>
+              <option value="3">3 members</option>
+              <option value="4">4 members</option>
+              <option value="5">5 members</option>
+              <option value="6">6 members</option>
+              <option value="7">7 members</option>
+              <option value="8">8 members</option>
             </select>
           </div>
-          <div class="form-group col-6 px-5">
-            <label for="teamGender">Team Gender: </label>
-            <select class="form-control" id="teamGender" name="gender">
-              <option>-- Choose Team Gender --</option>
-            </select>
+        </div>
+          <div class="row">
+            <div class="form-group col-6 offset-3 px-5">
+              <label for="teamGender">Team Gender: </label>
+              <select class="form-control" id="teamGender" name="teamgender">
+                <option>-- Choose Team Gender --</option>
+                <option value="Any">Any</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
           </div>
         </div>
         <a class="btn btn-danger mt-3" id="cancelBtn" href="index.html">
@@ -199,6 +224,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/registerteam.js"></script>
     <script src="scripts/theme.js"></script>
   </body>
 </html>
