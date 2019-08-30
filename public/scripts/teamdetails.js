@@ -4,8 +4,6 @@ $(function() {
   // Gets teamId from query
   let urlParams = new URLSearchParams(location.search);
   let id = urlParams.get("teamid");
-  sessionStorage.setItem("teamid", id);
-
   $("#memberInfo").hide();
   $("#cancelBtn").hide();
   $("#submitBtn").hide();
@@ -21,7 +19,7 @@ $(function() {
     $("#memberEmail").prop("readonly", false);
     $("#contactName").prop("readonly", false);
     $("#memberAge").prop("readonly", false);
-    $("#memberGender").prop("readonly", false);
+    $("#memberGender").prop("disabled", false);
     $("#memberPhone").prop("readonly", false);
     $("#editMode").show();
   });
@@ -33,7 +31,7 @@ $(function() {
     $("#memberEmail").prop("readonly", true);
     $("#contactName").prop("readonly", true);
     $("#memberAge").prop("readonly", true);
-    $("#memberGender").prop("readonly", true);
+    $("#memberGender").prop("disabled", true);
     $("#memberPhone").prop("readonly", true);
     $("#editMode").hide();
   });
@@ -41,7 +39,7 @@ $(function() {
   $("#submitBtn").on("click", sendForm);
 
   function sendForm() {
-    confirm("Are you sure you want to make these changes to this member?");
+    confirm("Are you sure you want to make these changes?");
     $.ajax({
       //if/else w validation, see editcourse
       url: "/api/teams/" + id + "/members",
@@ -49,8 +47,8 @@ $(function() {
       dataType: "json",
       data: $("#memberInfo").serialize()
     });
-    alert("Updated member!");
-    location.href = "teamdetails.html?teamid=" + id;
+    alert("Updated member info!");
+    location.reload();
   }
 
   //return false;
@@ -76,7 +74,7 @@ $(function() {
           i +
           "' href='#memberInfo?memberid=" +
           team.Members[i].MemberId +
-          "'>Details</a></td><td><button class='btn btn-danger' href='divisions.html' id='deleteid" +
+          "'>Details</a></td><td><button class='btn btn-danger' id='deleteid" +
           team.Members[i].MemberId +
           "'>Delete</button></td></tr>"
       );
@@ -88,10 +86,12 @@ $(function() {
         $.ajax({
           url: "/api/teams/" + id + "/members/" + team.Members[i].MemberId,
           method: "DELETE",
-          contentType: "application/json"
+          contentType: "application/json",
+          success: function() {
+            alert("Member deleted!");
+            location.reload();
+          }
         });
-        alert("Member deleted!");
-        location.href = "teamdetails.html?teamid=" + id;
       });
 
       $("#id" + i).on("click", function() {

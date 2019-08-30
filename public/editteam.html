@@ -93,23 +93,19 @@
         </p>
       </section>
 
-      <form
-        name="editTeam"
-        id="editTeam"
-        class="col-8 offset-2 py-3 my-3"
-      >
-      <div class="row">
-            <div class="form-group col-6 offset-3 px-5">
-              <label for="teamId">Team ID: </label>
-              <input
+      <form name="editTeam" id="editTeam" class="col-8 offset-2 py-3 my-3">
+        <div class="row">
+          <div class="form-group col-6 offset-3 px-5">
+            <label for="teamId">Team ID: </label>
+            <input
               type="text"
               class="form-control"
               id="teamId"
               name="teamid"
               readonly
             />
-            </div>
           </div>
+        </div>
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="teamName">Team Name: </label>
@@ -124,8 +120,12 @@
 
           <div class="form-group col-6 px-5">
             <label for="teamLeague">League:</label>
-            <select class="form-control" id="teamLeague" name="leaguecode"
-            disabled>
+            <select
+              class="form-control"
+              id="teamLeague"
+              name="leaguecode"
+              disabled
+            >
             </select>
           </div>
         </div>
@@ -203,15 +203,19 @@
             </select>
           </div>
         </div>
-          <div class="row">
-            <div class="form-group col-6 offset-3 px-5">
-              <label for="teamGender">Team Gender: </label>
-              <select class="form-control" id="teamGender" name="teamgender" disabled>
-                <option value="Any">Any</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </div>
+        <div class="row">
+          <div class="form-group col-6 offset-3 px-5">
+            <label for="teamGender">Team Gender: </label>
+            <select
+              class="form-control"
+              id="teamGender"
+              name="teamgender"
+              disabled
+            >
+              <option value="Any">Any</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
         </div>
         <a class="btn btn-info mt-3" id="teamEditBtn" href="#editTeam">Edit</a>
