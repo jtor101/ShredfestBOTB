@@ -6,7 +6,8 @@ $(function() {
 
   $("#submitBtn").on("click", function() {
     $.post("api/teams/" + id + "/members", $("#registerMember").serialize());
-    window.location.href = "teamdetails.html?teamid=" + id; //redirects after submit to courses.html
+    location.href = "divisions.html";
+    //redirects after submit to courses.html
     //return false;
   });
 });

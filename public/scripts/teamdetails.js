@@ -4,6 +4,8 @@ $(function() {
   // Gets teamId from query
   let urlParams = new URLSearchParams(location.search);
   let id = urlParams.get("teamid");
+  sessionStorage.setItem("teamid", id);
+
   $("#memberInfo").hide();
   $("#cancelBtn").hide();
   $("#submitBtn").hide();
@@ -39,17 +41,16 @@ $(function() {
   $("#submitBtn").on("click", sendForm);
 
   function sendForm() {
+    confirm("Are you sure you want to make these changes to this member?");
     $.ajax({
       //if/else w validation, see editcourse
       url: "/api/teams/" + id + "/members",
       method: "PUT",
       dataType: "json",
-      data: $("#memberInfo").serialize(),
-      success: function() {
-        alert("Updated!");
-      }
+      data: $("#memberInfo").serialize()
     });
-    location.href = "index.html";
+    alert("Updated member!");
+    location.href = "teamdetails.html?teamid=" + id;
   }
 
   //return false;
@@ -75,7 +76,7 @@ $(function() {
           i +
           "' href='#memberInfo?memberid=" +
           team.Members[i].MemberId +
-          "'>Details</a></td><td><button class='btn btn-danger' id='deleteid" +
+          "'>Details</a></td><td><button class='btn btn-danger' href='divisions.html' id='deleteid" +
           team.Members[i].MemberId +
           "'>Delete</button></td></tr>"
       );
@@ -87,11 +88,10 @@ $(function() {
         $.ajax({
           url: "/api/teams/" + id + "/members/" + team.Members[i].MemberId,
           method: "DELETE",
-          contentType: "application/json",
-          success: function() {
-            alert("Updated!");
-          }
+          contentType: "application/json"
         });
+        alert("Member deleted!");
+        location.href = "teamdetails.html?teamid=" + id;
       });
 
       $("#id" + i).on("click", function() {

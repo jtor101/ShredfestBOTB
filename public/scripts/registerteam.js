@@ -14,7 +14,9 @@ $(function() {
     }
   });
   $("#submitBtn").on("click", function() {
+    confirm("Are you sure you want to register this band?");
     $.post("api/teams", $("#registerTeam").serialize());
-    window.location.href = "divisions.html"; //redirects after submit to courses.html
+    alert("Band registered!");
+    // Form action redirects to divisions.html
   });
 });

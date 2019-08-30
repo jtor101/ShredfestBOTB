@@ -86,7 +86,7 @@ $(function() {
               alert("Updated!");
             }
           });
-          location.href = "index.html";
+          location.href = "divisions.html";
         });
       }
     });

@@ -118,13 +118,14 @@
               class="form-control"
               id="teamName"
               name="teamname"
+              readonly
             />
           </div>
 
           <div class="form-group col-6 px-5">
             <label for="teamLeague">League:</label>
-            <select class="form-control" id="teamLeague" name="leaguecode">
-              <option>-- Choose A League --</option>
+            <select class="form-control" id="teamLeague" name="leaguecode"
+            disabled>
             </select>
           </div>
         </div>
@@ -137,6 +138,7 @@
               class="form-control"
               id="managerName"
               name="managername"
+              readonly
             />
           </div>
 
@@ -147,6 +149,7 @@
               class="form-control"
               id="managerPhone"
               name="managerphone"
+              readonly
             />
           </div>
         </div>
@@ -158,6 +161,7 @@
               class="form-control"
               id="minAge"
               name="minmemberage"
+              readonly
             />
           </div>
           <div class="form-group col-6 px-5">
@@ -167,6 +171,7 @@
               class="form-control"
               id="managerEmail"
               name="manageremail"
+              readonly
             />
           </div>
         </div>
@@ -178,6 +183,7 @@
               class="form-control"
               id="maxAge"
               name="maxmemberage"
+              readonly
             />
           </div>
           <div class="form-group col-6 px-5">
@@ -186,8 +192,8 @@
               class="form-control"
               id="maxTeamMembers"
               name="maxteammembers"
+              disabled
             >
-              <option>-- Choose Member Maximum --</option>
               <option value="3">3 members</option>
               <option value="4">4 members</option>
               <option value="5">5 members</option>
@@ -200,8 +206,7 @@
           <div class="row">
             <div class="form-group col-6 offset-3 px-5">
               <label for="teamGender">Team Gender: </label>
-              <select class="form-control" id="teamGender" name="teamgender">
-                <option>-- Choose Team Gender --</option>
+              <select class="form-control" id="teamGender" name="teamgender" disabled>
                 <option value="Any">Any</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -209,12 +214,16 @@
             </div>
           </div>
         </div>
-        <a class="btn btn-danger mt-3" id="cancelBtn" href="index.html">
+        <a class="btn btn-info mt-3" id="teamEditBtn" href="#editTeam">Edit</a>
+        <a class="btn btn-danger mt-3" id="teamCancelBtn" href="#editTeam">
           Cancel
         </a>
-        <button type="submit" class="btn btn-success mt-3" id="submitBtn">
+        <button type="submit" class="btn btn-success mt-3" id="teamSubmitBtn">
           Submit
         </button>
+        <a class="btn btn-primary mt-3" id="backBtn" href="divisions.html">
+          Back To Divisions
+        </a>
       </form>
     </main>
     <footer class="text-center py-2" id="nslfoot">
