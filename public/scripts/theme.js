@@ -1,6 +1,7 @@
 "use strict";
 
 $(function() {
+  // Light theme radio button
   $("#lightRadio").on("change", function() {
     localStorage.themeset = "lightTheme";
     if (localStorage.themeset == "lightTheme") {
@@ -69,6 +70,7 @@ $(function() {
       .css("color", "black");
   });
 
+  // Dark theme radio button
   $("#darkRadio").on("change", function() {
     localStorage.themeset = "darkTheme";
     if (localStorage.themeset == "darkTheme") {

@@ -1,3 +1,4 @@
+/* Sets border and background-color to light theme */
 #headerBg,
 #nslfoot,
 #contentArea1,
@@ -16,6 +17,7 @@
   background-color: lightgrey;
 }
 
+/* Controls header text size */
 #headerBg h1 {
   font-size: 2.7em;
 }
@@ -24,6 +26,7 @@
   font-size: 2.2em;
 }
 
+/* Controls section text size */
 #contentArea1 h3,
 #contentArea2 h3,
 #contentArea3 h3,
@@ -33,14 +36,17 @@
   font-size: 2em;
 }
 
+/* Team Details Card heading size */
 .card h4 {
   font-size: 1.8em;
 }
 
+/* Edit Mode size */
 #editMode {
   font-size: 2em;
 }
 
+/* Theme picker radio button label size */
 #themePick {
   font-size: 0.8em;
 }

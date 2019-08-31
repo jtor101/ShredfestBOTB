@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="css/site.css" type="text/css" />
     <link rel="icon" href="#" />
 
-    <title>Shredfest BOTB</title>
+    <title>Shredfest BOTB - Team Details</title>
   </head>
 
   <body class="container-fluid" id="nslbody">
     <!-- Header -->
     <header class="py-4" id="headerBg">
+      <!-- Theme Picker -->
       <div class="pl-3" id="themePick">
         <div class="form-check">
           <input
@@ -82,11 +83,13 @@
     </nav>
 
     <main>
+      <!-- Register New Button -->
       <div class="row">
         <a class="btn btn-info col-2 offset-5 my-4" id="regBtn" href="#"
           >Register New Member</a
         >
       </div>
+      <!-- Member Details Table -->
       <div class="row">
         <table
           class="table table-hover table-bordered col-8 offset-2"
@@ -108,16 +111,19 @@
         </table>
       </div>
 
+      <!-- Edit Mode div, hides/shows when Edit button/Cancel button clicked. -->
       <div class="row">
         <p class="col text-center" id="editMode">EDIT MODE</p>
       </div>
 
+      <!-- Begin Member Info Form, readonly/disabled toggles with Edit/Cancel -->
       <form
         name="memberInfo"
         id="memberInfo"
         class="col-8 offset-2 py-3 my-3"
         action="divisions.html"
       >
+        <!-- Member ID -->
         <div class="row">
           <div class="form-group col-4 offset-4 px-5">
             <label for="memberId">Member Id: </label>
@@ -130,6 +136,7 @@
             />
           </div>
         </div>
+        <!-- Member Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="memberName">Member Name: </label>
@@ -142,6 +149,7 @@
             />
           </div>
 
+          <!-- Member Email -->
           <div class="form-group col-6 px-5">
             <label for="memberEmail">Email:</label>
             <input
@@ -153,6 +161,8 @@
             />
           </div>
         </div>
+
+        <!-- Contact Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="contactName">Contact Name: </label>
@@ -165,6 +175,7 @@
             />
           </div>
 
+          <!-- Member Age -->
           <div class="form-group col-6 px-5">
             <label for="memberAge">Age:</label>
             <input
@@ -176,6 +187,7 @@
             />
           </div>
         </div>
+        <!-- Member Gender -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="memberGender">Gender:</label>
@@ -190,6 +202,7 @@
               <option value="Female">Female</option>
             </select>
           </div>
+          <!-- Member Phone -->
           <div class="form-group col-6 px-5">
             <label for="memberPhone">Phone: </label>
             <input
@@ -201,15 +214,21 @@
             />
           </div>
         </div>
+        <!-- Edit button -->
         <a class="btn btn-info mt-3" id="editBtn" href="#memberInfo">Edit</a>
+        <!-- Cancel button -->
         <a class="btn btn-danger mt-3" id="cancelBtn" href="#memberInfo">
           Cancel
         </a>
+        <!-- Submit button -->
         <button type="button" class="btn btn-success mt-3" id="submitBtn">
           Submit
         </button>
       </form>
+      <!-- End Form -->
     </main>
+
+    <!-- Footer -->
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
     </footer>

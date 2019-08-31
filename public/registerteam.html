@@ -24,6 +24,7 @@
   <body class="container-fluid" id="nslbody">
     <!-- Header -->
     <header class="py-4" id="headerBg">
+      <!-- Theme Picker -->
       <div class="pl-3" id="themePick">
         <div class="form-check">
           <input
@@ -82,6 +83,7 @@
     </nav>
 
     <main class="row">
+      <!-- First Content Area -->
       <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
         <h3>Register A Team</h3>
         <p>
@@ -93,12 +95,14 @@
         </p>
       </section>
 
+      <!-- Begin Register Team form -->
       <form
         name="registerTeam"
         id="registerTeam"
         class="col-8 offset-2 py-3 my-3"
         action="divisions.html"
       >
+        <!-- Team Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="teamName">Team Name: </label>
@@ -110,6 +114,7 @@
             />
           </div>
 
+          <!-- Team League -->
           <div class="form-group col-6 px-5">
             <label for="teamLeague">League:</label>
             <select class="form-control" id="teamLeague" name="leaguecode">
@@ -118,6 +123,7 @@
           </div>
         </div>
 
+        <!-- Manager Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="managerName">Manager Name: </label>
@@ -129,6 +135,7 @@
             />
           </div>
 
+          <!-- Manager Phone -->
           <div class="form-group col-6 px-5">
             <label for="managerPhone">Manager Phone:</label>
             <input
@@ -139,6 +146,8 @@
             />
           </div>
         </div>
+
+        <!-- Minimum Age -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="minAge">Minimum Age:</label>
@@ -149,6 +158,8 @@
               name="minmemberage"
             />
           </div>
+
+          <!-- Manager Email -->
           <div class="form-group col-6 px-5">
             <label for="maxAge">Manager Email: </label>
             <input
@@ -159,6 +170,8 @@
             />
           </div>
         </div>
+
+        <!-- Maximum Age -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="maxAge">Maximum Age: </label>
@@ -169,6 +182,8 @@
               name="maxmemberage"
             />
           </div>
+
+          <!-- Maximum Team Members -->
           <div class="form-group col-6 px-5">
             <label for="maxTeamMembers">Maximum Team Members:</label>
             <select
@@ -186,6 +201,8 @@
             </select>
           </div>
         </div>
+
+        <!-- Team Gender -->
         <div class="row">
           <div class="form-group col-6 offset-3 px-5">
             <label for="teamGender">Team Gender: </label>
@@ -197,14 +214,21 @@
             </select>
           </div>
         </div>
+
+        <!-- Cancel button -->
         <a class="btn btn-danger mt-3" id="cancelBtn" href="index.html">
           Cancel
         </a>
+
+        <!-- Submit button -->
         <button type="submit" class="btn btn-success mt-3" id="submitBtn">
           Submit
         </button>
       </form>
+      <!-- End Form -->
     </main>
+
+    <!-- Footer -->
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
     </footer>

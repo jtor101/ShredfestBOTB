@@ -24,6 +24,7 @@
   <body class="container-fluid" id="nslbody">
     <!-- Header -->
     <header class="py-4" id="headerBg">
+      <!-- Theme Picker -->
       <div class="pl-3" id="themePick">
         <div class="form-check">
           <input
@@ -82,6 +83,7 @@
     </nav>
 
     <main class="row">
+      <!-- First Content Area -->
       <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
         <h3>Register A Member</h3>
         <p>
@@ -93,11 +95,13 @@
         </p>
       </section>
 
+      <!-- Begin Register Member form -->
       <form
         name="registerMember"
         id="registerMember"
         class="col-8 offset-2 py-3 my-3"
       >
+        <!-- Member Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="memberName">Member Name: </label>
@@ -109,6 +113,7 @@
             />
           </div>
 
+          <!-- Member Email -->
           <div class="form-group col-6 px-5">
             <label for="memberEmail">Email:</label>
             <input
@@ -119,6 +124,8 @@
             />
           </div>
         </div>
+
+        <!-- Contact Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="contactName">Contact Name: </label>
@@ -130,6 +137,7 @@
             />
           </div>
 
+          <!-- Member Age -->
           <div class="form-group col-6 px-5">
             <label for="memberAge">Age:</label>
             <input
@@ -140,6 +148,8 @@
             />
           </div>
         </div>
+
+        <!-- Member Gender -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="teamGender">Gender: </label>
@@ -149,6 +159,8 @@
               <option value="Female">Female</option>
             </select>
           </div>
+
+          <!-- Member Phone -->
           <div class="form-group col-6 px-5">
             <label for="memberPhone">Phone: </label>
             <input
@@ -159,14 +171,21 @@
             />
           </div>
         </div>
+
+        <!-- Cancel button -->
         <a class="btn btn-danger mt-3" id="cancelBtn" href="divisions.html">
           Cancel
         </a>
+
+        <!-- Submit button -->
         <button type="submit" class="btn btn-success mt-3" id="submitBtn">
           Submit
         </button>
       </form>
+      <!-- End Form -->
     </main>
+
+    <!-- Footer -->
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
     </footer>

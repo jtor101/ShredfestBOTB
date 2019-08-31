@@ -13,6 +13,7 @@ $(function() {
       $("#teamLeague").append(element);
     }
   });
+  // Submit button click handler
   $("#submitBtn").on("click", function() {
     confirm("Are you sure you want to register this band?");
     $.post("api/teams", $("#registerTeam").serialize());

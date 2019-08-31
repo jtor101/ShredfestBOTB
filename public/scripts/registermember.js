@@ -4,6 +4,7 @@ $(function() {
   let urlParams = new URLSearchParams(location.search);
   let id = urlParams.get("teamid");
 
+  // Submit button click handler
   $("#submitBtn").on("click", function() {
     confirm("Are you sure you want to add this member?");
     $.post(

@@ -4,13 +4,16 @@ $(function() {
   // Gets teamId from query
   let urlParams = new URLSearchParams(location.search);
   let id = urlParams.get("teamid");
+  // Hides Member Info, Edit Mode, and Cancel/Submit buttons
   $("#memberInfo").hide();
   $("#cancelBtn").hide();
   $("#submitBtn").hide();
   $("#editMode").hide();
 
+  // Assigns link to register button
   $("#regBtn").attr("href", "registermember.html?teamid=" + id);
 
+  // Edit button enables fields and shows Edit Mode and Cancel/Submit
   $("#editBtn").on("click", function() {
     $("#editBtn").hide();
     $("#cancelBtn").show();
@@ -23,6 +26,7 @@ $(function() {
     $("#memberPhone").prop("readonly", false);
     $("#editMode").show();
   });
+  // Cancel button disables fields and hides Edit Mode and Cancel/Submit
   $("#cancelBtn").on("click", function() {
     $("#editBtn").show();
     $("#cancelBtn").hide();
@@ -36,6 +40,7 @@ $(function() {
     $("#editMode").hide();
   });
 
+  // Submit Button click handler
   $("#submitBtn").on("click", sendForm);
 
   function sendForm() {
@@ -81,6 +86,7 @@ $(function() {
 
       $("#teamTBody").append(memInfo);
 
+      // Delete Button
       $("#deleteid" + team.Members[i].MemberId).on("click", function() {
         confirm("Are you sure you want to delete this member?");
         $.ajax({
@@ -94,6 +100,7 @@ $(function() {
         });
       });
 
+      // Brings up Member Info table with member info populated in fields.
       $("#id" + i).on("click", function() {
         $("#memberInfo").show();
         $("#memberId").val(team.Members[i].MemberId);

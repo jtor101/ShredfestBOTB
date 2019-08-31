@@ -4,9 +4,12 @@ $(function() {
   // Gets teamId from query
   let urlParams = new URLSearchParams(location.search);
   let id = urlParams.get("teamid");
+
+  // Hides Submit/Cancel
   $("#teamSubmitBtn").hide();
   $("#teamCancelBtn").hide();
 
+  // Edit Button enables fields, shows Submit/Cancel, hides self.
   $("#teamEditBtn").on("click", function() {
     $("#teamEditBtn").hide();
     $("#teamCancelBtn").show();
@@ -22,6 +25,7 @@ $(function() {
     $("#teamGender").prop("disabled", false);
     //  $("#editMode").show();
   });
+  // Cancel Button disables fields, hides Submit/Cancel, shows Edit
   $("#teamCancelBtn").on("click", function() {
     $("#teamEditBtn").show();
     $("#teamCancelBtn").hide();
@@ -51,8 +55,10 @@ $(function() {
     }
   });
 
+  // Submit button handler
   $("#teamSubmitBtn").on("click", sendForm);
 
+  // Send form function
   function sendForm() {
     confirm("Are you sure you want to confirm these changes?");
     $.ajax({
@@ -67,6 +73,7 @@ $(function() {
     });
   }
 
+  // Populates form fields with current values.
   $.getJSON("/api/teams/" + id, function(data) {
     let team = data;
 

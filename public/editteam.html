@@ -24,6 +24,7 @@
   <body class="container-fluid" id="nslbody">
     <!-- Header -->
     <header class="py-4" id="headerBg">
+      <!-- Theme Picker -->
       <div class="pl-3" id="themePick">
         <div class="form-check">
           <input
@@ -82,6 +83,7 @@
     </nav>
 
     <main class="row">
+      <!-- First Content Area -->
       <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
         <h3>Edit A Team</h3>
         <p>
@@ -93,7 +95,9 @@
         </p>
       </section>
 
+      <!-- Begin Edit Team form -->
       <form name="editTeam" id="editTeam" class="col-8 offset-2 py-3 my-3">
+        <!-- Team ID -->
         <div class="row">
           <div class="form-group col-6 offset-3 px-5">
             <label for="teamId">Team ID: </label>
@@ -106,6 +110,8 @@
             />
           </div>
         </div>
+
+        <!-- Team Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="teamName">Team Name: </label>
@@ -118,6 +124,7 @@
             />
           </div>
 
+          <!-- Team League -->
           <div class="form-group col-6 px-5">
             <label for="teamLeague">League:</label>
             <select
@@ -130,6 +137,7 @@
           </div>
         </div>
 
+        <!-- Manager Name -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="managerName">Manager Name: </label>
@@ -142,6 +150,7 @@
             />
           </div>
 
+          <!-- Manager Phone -->
           <div class="form-group col-6 px-5">
             <label for="managerPhone">Manager Phone:</label>
             <input
@@ -153,6 +162,8 @@
             />
           </div>
         </div>
+
+        <!-- Minimum Age -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="minAge">Minimum Age:</label>
@@ -164,6 +175,8 @@
               readonly
             />
           </div>
+
+          <!-- Manager Email -->
           <div class="form-group col-6 px-5">
             <label for="managerEmail">Manager Email: </label>
             <input
@@ -175,6 +188,8 @@
             />
           </div>
         </div>
+
+        <!-- Maximum Age -->
         <div class="row">
           <div class="form-group col-6 px-5">
             <label for="maxAge">Maximum Age: </label>
@@ -186,6 +201,8 @@
               readonly
             />
           </div>
+
+          <!-- Maximum Team Members -->
           <div class="form-group col-6 px-5">
             <label for="maxTeamMembers">Maximum Team Members:</label>
             <select
@@ -203,6 +220,8 @@
             </select>
           </div>
         </div>
+
+        <!-- Team Gender -->
         <div class="row">
           <div class="form-group col-6 offset-3 px-5">
             <label for="teamGender">Team Gender: </label>
@@ -218,21 +237,33 @@
             </select>
           </div>
         </div>
+
+        <!-- Edit button -->
         <a class="btn btn-info mt-3" id="teamEditBtn" href="#editTeam">Edit</a>
+
+        <!-- Cancel button -->
         <a class="btn btn-danger mt-3" id="teamCancelBtn" href="#editTeam">
           Cancel
         </a>
+
+        <!-- Submit button -->
         <button type="submit" class="btn btn-success mt-3" id="teamSubmitBtn">
           Submit
         </button>
+
+        <!-- Back To Divisions button -->
         <a class="btn btn-primary mt-3" id="backBtn" href="divisions.html">
           Back To Divisions
         </a>
       </form>
+      <!-- End Form -->
     </main>
+
+    <!-- Footer -->
     <footer class="text-center py-2" id="nslfoot">
       John Torres - HartCode 2019
     </footer>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
