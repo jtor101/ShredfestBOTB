@@ -2,12 +2,9 @@
 
 $(function() {
   // Light theme radio button
-  $("#lightRadio").on("change", function() {
-    localStorage.themeset = "lightTheme";
-    if (localStorage.themeset == "lightTheme") {
-      $("#lightRadio").attr("checked", "true");
-    }
+  $("#lightRadio").on("change", lightThemeColors);
 
+  function lightThemeColors() {
     $("#nslbody").css("background-color", "white");
     $("#headerBg")
       .css("background-color", "lightgrey")
@@ -68,15 +65,12 @@ $(function() {
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
       .css("color", "black");
-  });
+  }
 
   // Dark theme radio button
-  $("#darkRadio").on("change", function() {
-    localStorage.themeset = "darkTheme";
-    if (localStorage.themeset == "darkTheme") {
-      $("#darkRadio").attr("checked", "true");
-    }
+  $("#darkRadio").on("change", darkThemeColors);
 
+  function darkThemeColors() {
     $("#nslbody").css("background-color", "black");
     $("#headerBg")
       .css("background-color", "grey")
@@ -137,5 +131,18 @@ $(function() {
       .css("background-color", "grey")
       .css("border", "1px ridge white")
       .css("color", "white");
+  }
+  var radios = document.getElementsByName("themeRadios");
+  var val = localStorage.getItem("themeset");
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].value == val) {
+      radios[i].checked = true;
+      if (radios[i].value == "darkTheme") {
+        darkThemeColors();
+      }
+    }
+  }
+  $('input[name="themeRadios"]').on("change", function() {
+    localStorage.setItem("themeset", $(this).val());
   });
 });
