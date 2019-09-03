@@ -61,6 +61,16 @@ $(function() {
       $("#minAgeError").show();
       return false;
     }
+    
+    if (
+      $("#minAge")
+        .val()
+        .trim() < 18
+    ) {
+      $("#minAgeError").text("Minimum Age must be greater than 18");
+      $("#minAgeError").show();
+      return false;
+    }
 
     if (
       $("#emailAddr")

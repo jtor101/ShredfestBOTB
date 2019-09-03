@@ -50,6 +50,15 @@ $(function() {
       $("#memberAgeError").show();
       return false;
     }
+    if (
+      $("#memberAge")
+        .val()
+        .trim() < 18
+    ) {
+      $("#memberAgeError").text("Member Age must be greater than 18");
+      $("#memberAgeError").show();
+      return false;
+    }
 
     if (
       $("#memberPhone")
