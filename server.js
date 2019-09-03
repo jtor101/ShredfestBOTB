@@ -144,15 +144,15 @@ function isValidTeam(team) {
 
 function isValidMember(member) {
   console.log(member);
-  console.log("Validating email");
+
   if (member.Email == undefined || member.Email.trim() == "") return false;
-  console.log("Validating member name");
+
   if (member.MemberName == undefined || member.MemberName.trim() == "")
     return false;
-  console.log("Validating contact name");
+
   if (member.ContactName == undefined || member.ContactName.trim() == "")
     return false;
-  console.log("Got this far");
+
   if (member.Phone == undefined || member.Phone.trim() == "") return false;
   if (member.Age == undefined || isNaN(member.Age)) return false;
   if (member.Gender == undefined || member.Gender.trim() == "") return false;

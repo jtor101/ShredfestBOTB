@@ -1,6 +1,23 @@
 "use strict";
 
 $(function() {
+  var radios = document.getElementsByName("themeRadios");
+  var val = localStorage.getItem("themeset");
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].value == val) {
+      radios[i].checked = true;
+      if (radios[i].value == "darkTheme") {
+        darkThemeColors();
+      }
+      if (radios[i].value == "lightTheme") {
+        lightThemeColors();
+      }
+    }
+  }
+  $('input[name="themeRadios"]').on("change", function() {
+    localStorage.setItem("themeset", $(this).val());
+  });
+
   // Light theme radio button
   $("#lightRadio").on("change", lightThemeColors);
 
@@ -148,17 +165,4 @@ $(function() {
       .css("border", "1px ridge white")
       .css("color", "white");
   }
-  var radios = document.getElementsByName("themeRadios");
-  var val = localStorage.getItem("themeset");
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[i].value == val) {
-      radios[i].checked = true;
-      if (radios[i].value == "darkTheme") {
-        darkThemeColors();
-      }
-    }
-  }
-  $('input[name="themeRadios"]').on("change", function() {
-    localStorage.setItem("themeset", $(this).val());
-  });
 });

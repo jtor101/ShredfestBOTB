@@ -149,11 +149,9 @@ $(function() {
         url: "/api/teams/",
         method: "PUT",
         dataType: "json",
-        data: $("#editTeam").serialize(),
-        success: function() {
-          alert("Updated!");
-        }
+        data: $("#editTeam").serialize()
       });
+      alert("Band Info updated!");
     }
   }
 
