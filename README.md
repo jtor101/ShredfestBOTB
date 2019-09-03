@@ -33,7 +33,7 @@ Image Of Edit Team - Edit Mode:
 Image Of Roster Details - Start:
 ![Image of Roster Details - Start](/public/images/caproster1.jpg)
 Image Of Roster Details - Member Details Opened:
-![Image of Roster Details - Member Details Opened](/public/images/caproster2.jpg) (redo)
+![Image of Roster Details - Member Details Opened](/public/images/caproster2.jpg)
 Image Of Roster Details - Edit Mode:
 ![Image of Roster Details - Edit Mode](/public/images/caproster3.jpg)
 
