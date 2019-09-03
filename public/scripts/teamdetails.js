@@ -9,6 +9,7 @@ $(function() {
   $("#cancelBtn").hide();
   $("#submitBtn").hide();
   $("#editMode").hide();
+  $(".errorMsg").hide();
 
   // Assigns link to register button
   $("#regBtn").attr("href", "registermember.html?teamid=" + id);
@@ -40,20 +41,81 @@ $(function() {
     $("#editMode").hide();
   });
 
+  // Input Validation
+  function inputVal() {
+    $(".errorMsg").hide();
+    $(".errorMsg").empty();
+
+    if (
+      $("#memberName")
+        .val()
+        .trim() == ""
+    ) {
+      $("#memberNameError").text("Member Name required");
+      $("#memberNameError").show();
+      return false;
+    }
+
+    if (
+      $("#memberEmail")
+        .val()
+        .trim() == ""
+    ) {
+      $("#memberEmailError").text("Member Email required");
+      $("#memberEmailError").show();
+      return false;
+    }
+
+    if (
+      $("#contactName")
+        .val()
+        .trim() == ""
+    ) {
+      $("#contactNameError").text("Contact Name required");
+      $("#contactNameError").show();
+      return false;
+    }
+
+    if (
+      $("#memberAge")
+        .val()
+        .trim() == ""
+    ) {
+      $("#memberAgeError").text("Member Age required");
+      $("#memberAgeError").show();
+      return false;
+    }
+
+    if (
+      $("#memberPhone")
+        .val()
+        .trim() == ""
+    ) {
+      $("#memberPhoneError").text("Member Phone Number required");
+      $("#memberPhoneError").show();
+      return false;
+    }
+  }
+
   // Submit Button click handler
   $("#submitBtn").on("click", sendForm);
 
   function sendForm() {
-    confirm("Are you sure you want to make these changes?");
-    $.ajax({
-      //if/else w validation, see editcourse
-      url: "/api/teams/" + id + "/members",
-      method: "PUT",
-      dataType: "json",
-      data: $("#memberInfo").serialize()
-    });
-    alert("Updated member info!");
-    location.reload();
+    let isOk = inputVal();
+    if (isOk == false) {
+      return;
+    } else {
+      confirm("Are you sure you want to make these changes?");
+      $.ajax({
+        //if/else w validation, see editcourse
+        url: "/api/teams/" + id + "/members",
+        method: "PUT",
+        dataType: "json",
+        data: $("#memberInfo").serialize()
+      });
+      alert("Updated member info!");
+      location.reload();
+    }
   }
 
   //return false;

@@ -53,3 +53,10 @@
 #themePick {
   font-size: 0.8em;
 }
+
+.errorMsg {
+  color: red;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+}

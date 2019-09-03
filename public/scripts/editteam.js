@@ -9,6 +9,7 @@ $(function() {
   $("#teamSubmitBtn").hide();
   $("#teamCancelBtn").hide();
   $("#editMode").hide();
+  $(".errorMsg").hide();
 
   // Edit Button enables fields, shows Submit/Cancel, hides self.
   $("#teamEditBtn").on("click", function() {
@@ -20,7 +21,7 @@ $(function() {
     $("#managerName").prop("readonly", false);
     $("#managerPhone").prop("readonly", false);
     $("#minAge").prop("readonly", false);
-    $("#managerEmail").prop("readonly", false);
+    $("#emailAddr").prop("readonly", false);
     $("#maxAge").prop("readonly", false);
     $("#maxTeamMembers").prop("disabled", false);
     $("#teamGender").prop("disabled", false);
@@ -36,7 +37,7 @@ $(function() {
     $("#managerName").prop("readonly", true);
     $("#managerPhone").prop("readonly", true);
     $("#minAge").prop("readonly", true);
-    $("#managerEmail").prop("readonly", true);
+    $("#emailAddr").prop("readonly", true);
     $("#maxAge").prop("readonly", true);
     $("#maxTeamMembers").prop("disabled", true);
     $("#teamGender").prop("disabled", true);
@@ -56,22 +57,94 @@ $(function() {
     }
   });
 
+  // Input Validation
+  function inputVal() {
+    $(".errorMsg")
+      .hide()
+      .empty();
+
+    if (
+      $("#teamName")
+        .val()
+        .trim() == ""
+    ) {
+      $("#teamNameError").text("Team Name required");
+      $("#teamNameError").show();
+      return false;
+    }
+
+    if (
+      $("#managerName")
+        .val()
+        .trim() == ""
+    ) {
+      $("#managerNameError").text("Manager Name required");
+      $("#managerNameError").show();
+      return false;
+    }
+
+    if (
+      $("#managerPhone")
+        .val()
+        .trim() == ""
+    ) {
+      $("#managerPhoneError").text("Manager Phone required");
+      $("#managerPhoneError").show();
+      return false;
+    }
+
+    if (
+      $("#minAge")
+        .val()
+        .trim() == ""
+    ) {
+      $("#minAgeError").text("Minimum Age required");
+      $("#minAgeError").show();
+      return false;
+    }
+
+    if (
+      $("#emailAddr")
+        .val()
+        .trim() == ""
+    ) {
+      $("#managerEmailError").text("Manager Email required");
+      $("#managerEmailError").show();
+      return false;
+    }
+
+    if (
+      $("#maxAge")
+        .val()
+        .trim() == ""
+    ) {
+      $("#maxAgeError").text("Maximum Age required");
+      $("#maxAgeError").show();
+      return false;
+    }
+  }
+
   // Submit button handler
   $("#teamSubmitBtn").on("click", sendForm);
 
   // Send form function
   function sendForm() {
-    confirm("Are you sure you want to confirm these changes?");
-    $.ajax({
-      //if/else w validation, see editcourse
-      url: "/api/teams/",
-      method: "PUT",
-      dataType: "json",
-      data: $("#editTeam").serialize(),
-      success: function() {
-        alert("Updated!");
-      }
-    });
+    let isOk = inputVal();
+    if (isOk == false) {
+      return;
+    } else {
+      confirm("Are you sure you want to confirm these changes?");
+      $.ajax({
+        //if/else w validation, see editcourse
+        url: "/api/teams/",
+        method: "PUT",
+        dataType: "json",
+        data: $("#editTeam").serialize(),
+        success: function() {
+          alert("Updated!");
+        }
+      });
+    }
   }
 
   // Populates form fields with current values.
@@ -83,7 +156,7 @@ $(function() {
     $("#teamLeague").val(team.League);
     $("#managerName").val(team.ManagerName);
     $("#managerPhone").val(team.ManagerPhone);
-    $("#managerEmail").val(team.ManagerEmail);
+    $("#emailAddr").val(team.ManagerEmail);
     $("#maxTeamMembers").val(team.MaxTeamMembers);
     $("#minAge").val(team.MinMemberAge);
     $("#maxAge").val(team.MaxMemberAge);

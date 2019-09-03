@@ -105,14 +105,15 @@
               class="form-control"
               id="teamName"
               name="teamname"
+              required
             />
+            <div id="teamNameError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Team League -->
           <div class="form-group col-6 px-5">
             <label for="teamLeague">League:</label>
             <select class="form-control" id="teamLeague" name="leaguecode">
-              <option>-- Choose A League --</option>
             </select>
           </div>
         </div>
@@ -126,7 +127,9 @@
               class="form-control"
               id="managerName"
               name="managername"
+              required
             />
+            <div id="managerNameError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Manager Phone -->
@@ -137,7 +140,9 @@
               class="form-control"
               id="managerPhone"
               name="managerphone"
+              required
             />
+            <div id="managerPhoneError" class="errorMsg mt-2"></div>
           </div>
         </div>
 
@@ -150,7 +155,9 @@
               class="form-control"
               id="minAge"
               name="minmemberage"
+              required
             />
+            <div id="minAgeError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Manager Email -->
@@ -161,7 +168,9 @@
               class="form-control"
               id="emailAddr"
               name="manageremail"
+              required
             />
+            <div id="managerEmailError" class="errorMsg mt-2"></div>
           </div>
         </div>
 
@@ -174,7 +183,9 @@
               class="form-control"
               id="maxAge"
               name="maxmemberage"
+              required
             />
+            <div id="maxAgeError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Maximum Team Members -->
@@ -185,7 +196,6 @@
               id="maxTeamMembers"
               name="maxteammembers"
             >
-              <option>-- Choose Member Maximum --</option>
               <option value="3">3 members</option>
               <option value="4">4 members</option>
               <option value="5">5 members</option>
@@ -201,7 +211,6 @@
           <div class="form-group col-6 offset-3 px-5">
             <label for="teamGender">Team Gender: </label>
             <select class="form-control" id="teamGender" name="teamgender">
-              <option>-- Choose Team Gender --</option>
               <option value="Any">Any</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>

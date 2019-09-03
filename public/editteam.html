@@ -96,7 +96,7 @@
       </div>
 
       <!-- Edit Mode div, hides/shows when Edit button/Cancel button clicked. -->
-        <p class="col-10 offset-1 text-center" id="editMode">EDIT MODE</p>
+      <p class="col-10 offset-1 text-center" id="editMode">EDIT MODE</p>
 
       <!-- Begin Edit Team form -->
       <form name="editTeam" id="editTeam" class="col-8 offset-2 py-3 my-3">
@@ -124,7 +124,9 @@
               id="teamName"
               name="teamname"
               readonly
+              required
             />
+            <div id="teamNameError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Team League -->
@@ -150,7 +152,9 @@
               id="managerName"
               name="managername"
               readonly
+              required
             />
+            <div id="managerNameError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Manager Phone -->
@@ -162,7 +166,9 @@
               id="managerPhone"
               name="managerphone"
               readonly
+              required
             />
+            <div id="managerPhoneError" class="errorMsg mt-2"></div>
           </div>
         </div>
 
@@ -176,7 +182,9 @@
               id="minAge"
               name="minmemberage"
               readonly
+              required
             />
+            <div id="minAgeError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Manager Email -->
@@ -185,10 +193,12 @@
             <input
               type="email"
               class="form-control"
-              id="managerEmail"
+              id="emailAddr"
               name="manageremail"
               readonly
+              required
             />
+            <div id="managerEmailError" class="errorMsg mt-2"></div>
           </div>
         </div>
 
@@ -202,7 +212,9 @@
               id="maxAge"
               name="maxmemberage"
               readonly
+              required
             />
+            <div id="maxAgeError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Maximum Team Members -->

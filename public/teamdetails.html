@@ -120,6 +120,7 @@
       </div>
 
       <!-- Begin Member Info Form, readonly/disabled toggles with Edit/Cancel -->
+
       <form
         name="memberInfo"
         id="memberInfo"
@@ -149,7 +150,9 @@
               id="memberName"
               name="membername"
               readonly
+              required
             />
+            <div id="memberNameError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Member Email -->
@@ -161,7 +164,9 @@
               id="memberEmail"
               name="email"
               readonly
+              required
             />
+            <div id="memberEmailError" class="errorMsg mt-2"></div>
           </div>
         </div>
 
@@ -175,7 +180,9 @@
               id="contactName"
               name="contactname"
               readonly
+              required
             />
+            <div id="contactNameError" class="errorMsg mt-2"></div>
           </div>
 
           <!-- Member Age -->
@@ -187,7 +194,9 @@
               id="memberAge"
               name="age"
               readonly
+              required
             />
+            <div id="memberAgeError" class="errorMsg mt-2"></div>
           </div>
         </div>
         <!-- Member Gender -->
@@ -214,7 +223,9 @@
               id="memberPhone"
               name="phone"
               readonly
+              required
             />
+            <div id="memberPhoneError" class="errorMsg mt-2"></div>
           </div>
         </div>
         <!-- Edit button -->
