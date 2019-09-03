@@ -75,18 +75,22 @@
             >Register Band</a
           >
         </li>
-        <li class="nav-item" id="nav3">
-          <a class="nav-link text-reset" href="#">Link 3</a>
-        </li>
       </ul>
     </nav>
 
     <main>
       <!-- Register New Button -->
       <div class="row">
-        <a class="btn btn-info col-2 offset-5 my-4" id="regBtn" href="#"
+        <a class="btn btn-info col-2 offset-4 my-4" id="regBtn" href="#"
           >Register New Member</a
         >
+        <a
+          class="btn btn-primary col-2 offset-5 m-4 px-4"
+          id="backBtn"
+          href="divisions.html"
+        >
+          Back To Divisions
+        </a>
       </div>
       <!-- Member Details Table -->
       <div class="row">
@@ -112,7 +116,7 @@
 
       <!-- Edit Mode div, hides/shows when Edit button/Cancel button clicked. -->
       <div class="row">
-        <p class="col text-center" id="editMode">EDIT MODE</p>
+        <p class="col-10 offset-1 text-center" id="editMode">EDIT MODE</p>
       </div>
 
       <!-- Begin Member Info Form, readonly/disabled toggles with Edit/Cancel -->
@@ -196,9 +200,9 @@
               name="gender"
               disabled
             >
-              <option value="Any">Any</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
+              <option value="Any">Prefer Not To Say</option>
             </select>
           </div>
           <!-- Member Phone -->

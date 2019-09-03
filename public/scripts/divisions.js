@@ -55,7 +55,7 @@ $(function() {
         let editTeamLink = $(
           "<a class='btn btn-secondary text-light' href='editteam.html?teamid=" +
             teams[i].TeamId +
-            "'>Edit Team Details</a>"
+            "'>Edit Band Details</a>"
         );
         // Generates View Roster Details Buttons and assigns unique id and URL.
         let detailsLink = $(

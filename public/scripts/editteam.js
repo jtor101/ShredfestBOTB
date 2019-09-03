@@ -5,9 +5,10 @@ $(function() {
   let urlParams = new URLSearchParams(location.search);
   let id = urlParams.get("teamid");
 
-  // Hides Submit/Cancel
+  // Hides Submit/Cancel/Edit Mode
   $("#teamSubmitBtn").hide();
   $("#teamCancelBtn").hide();
+  $("#editMode").hide();
 
   // Edit Button enables fields, shows Submit/Cancel, hides self.
   $("#teamEditBtn").on("click", function() {
@@ -23,7 +24,7 @@ $(function() {
     $("#maxAge").prop("readonly", false);
     $("#maxTeamMembers").prop("disabled", false);
     $("#teamGender").prop("disabled", false);
-    //  $("#editMode").show();
+    $("#editMode").show();
   });
   // Cancel Button disables fields, hides Submit/Cancel, shows Edit
   $("#teamCancelBtn").on("click", function() {
@@ -39,7 +40,7 @@ $(function() {
     $("#maxAge").prop("readonly", true);
     $("#maxTeamMembers").prop("disabled", true);
     $("#teamGender").prop("disabled", true);
-    //$("#editMode").hide();
+    $("#editMode").hide();
   });
 
   // Populates dropdown with leagues.

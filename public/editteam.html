@@ -75,24 +75,28 @@
             >Register Band</a
           >
         </li>
-        <li class="nav-item" id="nav3">
-          <a class="nav-link text-reset" href="#">Link 3</a>
-        </li>
       </ul>
     </nav>
 
     <main class="row">
       <!-- First Content Area -->
-      <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
-        <h3>Edit A Team</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          dui nisi, tristique sit amet dapibus et, sollicitudin vel orci. Mauris
-          ut lectus pellentesque magna tincidunt gravida. In hac habitasse
-          platea dictumst. Vestibulum finibus convallis ornare. Donec et mi et
-          nunc dictum luctus.
-        </p>
-      </section>
+      <div class="row">
+        <section
+          id="registerArea1"
+          class="col-10 offset-1 my-3 p-2 text-center"
+        >
+          <h3>Edit A Band</h3>
+          <p>
+            You can edit any band details using this form. Please click Edit at
+            the bottom of the page to enable Edit Mode, and then change any
+            details that require updating. Click Submit when you have finished
+            updating the form to finalize any changes made.
+          </p>
+        </section>
+      </div>
+
+      <!-- Edit Mode div, hides/shows when Edit button/Cancel button clicked. -->
+        <p class="col-10 offset-1 text-center" id="editMode">EDIT MODE</p>
 
       <!-- Begin Edit Team form -->
       <form name="editTeam" id="editTeam" class="col-8 offset-2 py-3 my-3">

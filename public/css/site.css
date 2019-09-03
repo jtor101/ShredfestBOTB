@@ -12,8 +12,11 @@
 #memberInfo,
 #registerArea1,
 #registerTeam,
-#editTeam {
+#registerMember,
+#editTeam,
+#editMode {
   border: 1px ridge black;
+  border-radius: 8px;
   background-color: lightgrey;
 }
 

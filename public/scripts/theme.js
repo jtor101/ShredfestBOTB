@@ -57,7 +57,15 @@ $(function() {
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
       .css("color", "black");
+    $("#registerMember")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
     $("#editTeam")
+      .css("background-color", "lightgrey")
+      .css("border", "1px ridge black")
+      .css("color", "black");
+    $("#editMode")
       .css("background-color", "lightgrey")
       .css("border", "1px ridge black")
       .css("color", "black");
@@ -123,7 +131,15 @@ $(function() {
       .css("background-color", "grey")
       .css("border", "1px ridge white")
       .css("color", "white");
+    $("#registerMember")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
     $("#editTeam")
+      .css("background-color", "grey")
+      .css("border", "1px ridge white")
+      .css("color", "white");
+    $("#editMode")
       .css("background-color", "grey")
       .css("border", "1px ridge white")
       .css("color", "white");
