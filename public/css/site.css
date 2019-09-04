@@ -32,21 +32,12 @@ body {
   background-position: center center;
 }
 
-/* Controls header text size */
-#headerBg h1 {
-  font-size: 2.7em;
-}
-
-#headerBg h2 {
-  font-size: 2.2em;
-}
-
 /* Controls section text size */
-#contentArea1 h3,
-#contentArea2 h3,
-#contentArea3 h3,
-#divisionArea1 h3,
-#divisionArea2 h3,
+#contentArea1 h1,
+#contentArea2 h1,
+#contentArea3 h1,
+#divisionArea1 h1,
+#divisionArea2 h1,
 #cardHeading {
   font-size: 2em;
 }
