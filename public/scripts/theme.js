@@ -1,11 +1,10 @@
 "use strict";
-
 $(function() {
   var radios = document.getElementsByName("themeRadios");
   var val = localStorage.getItem("themeset");
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].value == val) {
-      radios[i].checked = true;
+      radios[i].checked = !0;
       if (radios[i].value == "darkTheme") {
         darkThemeColors();
       }
@@ -17,18 +16,12 @@ $(function() {
   $('input[name="themeRadios"]').on("change", function() {
     localStorage.setItem("themeset", $(this).val());
   });
-
-  // Light theme radio button
   $("#lightRadio").on("change", lightThemeColors);
-
   function lightThemeColors() {
     $("#nslbody").css("background-color", "white");
     $("#headerBg")
-      .css("background-image", "url('/public/images/shredlight.jpg')")
+      .css("background-image", "url('/images/shredlight.jpg')")
       .css("border", "1px ridge black");
-    $("#lightRadioLabel").css("color", "black");
-    $("#darkRadioLabel").css("color", "black");
-    $("#bannerTxt").css("color", "black");
     $("#navlist").css("color", "black");
     $("#contentArea1")
       .css("background-color", "lightgrey")
@@ -91,18 +84,12 @@ $(function() {
       .css("border", "1px ridge black")
       .css("color", "black");
   }
-
-  // Dark theme radio button
   $("#darkRadio").on("change", darkThemeColors);
-
   function darkThemeColors() {
     $("#nslbody").css("background-color", "black");
     $("#headerBg")
-      .css("background-image", "url('/public/images/shreddark.jpg')")
+      .css("background-image", "url('/images/shreddark.jpg')")
       .css("border", "1px ridge white");
-    $("#lightRadioLabel").css("color", "white");
-    $("#darkRadioLabel").css("color", "white");
-    $("#bannerTxt").css("color", "white");
     $("#navlist").css("color", "white");
     $("#contentArea1")
       .css("background-color", "grey")

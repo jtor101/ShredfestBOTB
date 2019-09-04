@@ -16,7 +16,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/site.css" type="text/css" />
-    <link rel="icon" href="#" />
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.jpg" />
 
     <title>Shredfest BOTB - Register Member</title>
   </head>
@@ -24,9 +25,28 @@
   <body class="container-fluid" id="nslbody">
     <!-- Header -->
     <header class="py-5 img-fluid" id="headerBg">
-      <!-- Theme Picker -->
-      <div class="pl-3" id="themePick">
-        <!-- Light Theme -->
+    </header>
+
+    <!-- Nav -->
+    <nav>
+      <ul class="nav justify-content-center" id="navlist">
+        <li class="nav-item" id="navhome">
+          <a class="nav-link text-reset" href="index.html">Home</a>
+        </li>
+        <li class="nav-item" id="nav1">
+          <a class="nav-link text-reset" href="divisions.html"
+            >View Divisions</a
+          >
+        </li>
+        <li class="nav-item" id="nav2">
+          <a class="nav-link text-reset" href="registerteam.html"
+            >Register Band</a
+          >
+        </li>
+        <li class="nav-item dropdown" id="nav3">
+          <a class="nav-link dropdown-toggle text-reset" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Theme Settings</a>
+          <div class="dropdown-menu px-3">
+           <!-- Light Theme -->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -53,23 +73,7 @@
           </label>
         </div>
       </div>
-    </header>
-
-    <!-- Nav -->
-    <nav>
-      <ul class="nav justify-content-center" id="navlist">
-        <li class="nav-item" id="navhome">
-          <a class="nav-link text-reset" href="index.html">Home</a>
-        </li>
-        <li class="nav-item" id="nav1">
-          <a class="nav-link text-reset" href="divisions.html"
-            >View Divisions</a
-          >
-        </li>
-        <li class="nav-item" id="nav2">
-          <a class="nav-link text-reset" href="registerteam.html"
-            >Register Band</a
-          >
+          </div>
         </li>
       </ul>
     </nav>
@@ -206,7 +210,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/registermember.js"></script>
+    <script src="scripts/registermember.min.js"></script>
     <script src="scripts/theme.min.js"></script>
   </body>
 </html>
