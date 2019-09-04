@@ -24,7 +24,7 @@ $(function() {
   function lightThemeColors() {
     $("#nslbody").css("background-color", "white");
     $("#headerBg")
-      .css("background-color", "lightgrey")
+      .css("background-image", "url('/public/images/shredlight.jpg')")
       .css("border", "1px ridge black");
     $("#lightRadioLabel").css("color", "black");
     $("#darkRadioLabel").css("color", "black");
@@ -98,7 +98,7 @@ $(function() {
   function darkThemeColors() {
     $("#nslbody").css("background-color", "black");
     $("#headerBg")
-      .css("background-color", "grey")
+      .css("background-image", "url('/public/images/shreddark.jpg')")
       .css("border", "1px ridge white");
     $("#lightRadioLabel").css("color", "white");
     $("#darkRadioLabel").css("color", "white");

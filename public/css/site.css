@@ -1,5 +1,4 @@
 /* Sets border and background-color to light theme */
-#headerBg,
 #nslfoot,
 #contentArea1,
 #contentArea2,
@@ -18,6 +17,12 @@
   border: 1px ridge black;
   border-radius: 8px;
   background-color: lightgrey;
+}
+
+#headerBg {
+  border: 1px ridge black;
+  border-radius: 8px;
+  background-image: url(/public/images/shredlight.jpg);
 }
 
 /* Controls header text size */
