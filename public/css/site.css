@@ -23,6 +23,9 @@
   border: 1px ridge black;
   border-radius: 8px;
   background-image: url(/public/images/shredlight.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* Controls header text size */
