@@ -1,4 +1,7 @@
 "use strict";
+
+// This is the extra credit feature
+
 $(function() {
   var radios = document.getElementsByName("themeRadios");
   var val = localStorage.getItem("themeset");
