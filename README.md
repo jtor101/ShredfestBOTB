@@ -6,6 +6,12 @@ This project displays information about the division and team structure of a new
 Server Information:
 The server draws from the server.js file contained in the root, and can be started by opening a command prompt, changing your directory to the directory you downloaded the repo to, and entering "node server.js" into the command prompt. You can then navigate to the page by utilizing the URL of http://localhost:8081.
 
+Validation:
+The form fields only validate for blank entries and for a minimum age of 18.
+
+UI Note:
+The screenshots below do not include the banner graphic, and the theme selecting radio buttons have been moved to their own Navigation tab under "Theme Settings."
+
 Screenshots:
 Image Of Home Page - Light Theme:
 ![Image of Home Page - Light Theme](/public/images/capindex1.jpg)
